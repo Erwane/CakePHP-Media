@@ -11,6 +11,9 @@ class Media extends AppModel{
 		foreach(glob(WWW_ROOT.$info['dirname'].'/'.$info['filename'].'_*x*.jpg') as $v){
 			unlink($v);
 		}
+		foreach(glob(WWW_ROOT.$info['dirname'].'/'.$info['filename'].'_*x*.'.$info['extension']) as $v){
+			unlink($v);
+		}
 		foreach(glob(WWW_ROOT.$info['dirname'].'/'.$info['filename'].'.'.$info['extension']) as $v){
 			unlink($v);
 		}
